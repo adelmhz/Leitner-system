@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Review</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <br><br><br><br>
+    {% if persian_number != None %}
+        <div id="information">
+            <p>تعداد کارت ها برای مرور: {{ persian_number }}</p>
+            <p>تعداد کارت های جدید: {{ new_cards }}</p>
+            <br>
+            <button id="btnClick" onclick="myFunction()">شروع یادگیری</button>
+        </div>
+        <div id="learning" style="display:none;">
+            <p>{{ card.front }}</p>
+            <br>
+            <form method="POST">
+                <div class="btn-group">
+                    <input name="status" type="submit" value="بلدم" class="button" style="background-color: cornflowerblue">
+                    <input name="status" type="submit" value="بلد نیستم" class="button" style="background-color: crimson">
+                    <br>
+                </div>
+            </form>
+        </div>
+    {% else %}
+        <div class="cardsOver">
+            <p>شما کارتی برای مرور ندارید</p>
+        </div>
+    {% endif %}
+
+    <script>
+            function myFunction() {
+                document.getElementById("information").remove();
+                document.getElementById("learning").style.display = "block";
+            }
+    </script>
+
+{% endblock %}
+

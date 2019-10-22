@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+{% block header %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>add card</title>
+</head>
+{% endblock %}
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#">راهنما</a></li>
+            <li><a href="#">تنظیمات</a></li>
+            {% if request.path == '/review' %}
+                <li><a class="active" href="{{ url_for('review') }}">مرور</a></li>
+            {% else %}
+                <li><a href="{{ url_for('review') }}">مرور</a></li>
+            {% endif %}
+
+            {% if request.path == '/add' %}
+                <li><a class="active" href="{{ url_for('add') }}">اضافه کردن</a></li>
+            {% else %}
+                <li><a href="{{ url_for('add') }}">اضافه کردن</a></li>
+            {% endif %}
+            {% if request.path == '/deck' %}
+                <li><a class="active" href="{{ url_for('deck') }}">دسته کارت ها</a></li>
+            {% else %}
+                <li><a href="{{ url_for('deck') }}">دسته کارت ها</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</body>
+{% block content %} {% endblock %}
+</html>

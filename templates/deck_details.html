@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %} <title>{{ slug }}</title> {% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="wrapper">
+        <form method="POST">
+            <input name="query" class="search" type="text" placeholder="دنبال کارت میگردی؟" autocomplete="off"/>
+            <br><br>
+            جستجو بر اساس
+            <select name="searchBy">
+                <option value="front">رو</option>
+                <option value="back">پشت</option>
+            </select>
+            <input type="submit" value="" style="display: none;">
+        </form>
+</div>
+
+{% for massage in get_flashed_messages() %}
+    {% if massage == None %}
+        <div class="table-cards">
+            <br>
+            <table>
+                <tr>
+                    <th>رو</th>
+                    <th>پشت</th>
+                </tr>
+                {% for card in cards %}
+                    <tr>
+                        <th>{{ card.front }}</th>
+                        <th>{{ card.back }}</th>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    {% else %}
+        <p>{{ massage }}</p>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

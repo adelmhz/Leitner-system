@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <title>add card</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section class="content">
+        {% for message in get_flashed_messages() %}
+            {% if massage != None %}
+                <div class="flash">{{ message }}</div>
+            {% endif %}
+        {% endfor %}
+    </section>
+    <div class="card">
+        <form method="POST">
+            <div class="front">
+                <label for="front">رو</label><br><br>
+                <input class="cardInput" type="text" name="front" autocomplete="off"><br><br>
+            </div>
+            <label for="back">پشت</label><br><br>
+            <input class="cardInput" type="text" name="back" autocomplete="off"><br><br><br>
+            <input class="submitAdd" type="submit" value="اضافه کردن">
+            <div class="deck">
+                <select name="deck_select" class="select-css">
+                    <option value="{{ None }}">دسته بندی</option>
+                    {% for option in deck_options %}
+                        <option value="{{ option }}">{{ option.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </form> 
+        <br>
+    </div>
+{% endblock %}

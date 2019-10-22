@@ -1,0 +1,399 @@
+@media screen and (max-width: 600px) 
+{
+  .nav-bar {
+    font-size: 11px !important; 
+    border-radius: 2px;
+    margin:auto;
+    width: 237px!important;
+    padding: 1px;
+  }
+
+  li a {
+    padding: 5px 7px !important;
+  }
+
+  .decks {
+    font-size: 11px !important;
+    width: 150px !important;
+  }
+  .btn {
+    padding: 10px 10px !important;
+    font-size: 10px !important;
+  }
+
+  .cardInput {
+    width: 150px !important;
+    font-size: 10px !important;
+  }
+
+  .card {
+    font-size: 11px !important;
+  }
+
+  .submitAdd {
+    font-size: 11px !important;
+    padding: 7px 14px !important;
+    width: 70px !important;
+  }
+
+  .select-css {
+    font-size: 11px !important;
+    width: 70px !important;
+    padding: 7px 10px !important;
+  }
+
+}
+
+html, body{
+	font-family: lalezar;
+}
+
+.nav-bar {
+    font-size: 20px;
+    border-radius: 4px;
+    margin: auto;
+    width: 464px;
+    padding: 10px;
+}
+
+/* add.html */
+.card {
+  font-size: 20px;
+  border-radius: 4px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.deck {
+  font-size: 20px;
+  border-radius: 4px;
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4CAF50;
+    border-radius: 8px;
+  }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(124, 255, 141);
+  }
+
+.active {
+  background-color: rgb(105, 228, 109);
+}
+
+.cardInput {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #7cb661;
+    padding: 2px 5px;
+    font-size: 30px;
+    font-family: lalezar;
+    text-align: center;
+    background-color: rgb(219, 236, 245);
+    border-radius: 4px;
+    width: 390px;
+}
+
+.submitAdd {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 170px;
+    font-size: 18px;
+    left: 30px;
+    font-family: lalezar;
+  }
+
+  .select-css {
+    width: 100;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    font-family: lalezar;
+    margin: auto;
+    color: rgb(255, 255, 255);
+}
+
+.flash {
+  color: rgb(226, 36, 36);
+  margin: auto;
+  font-size: 16px;
+}
+
+/* deck.html */
+.decks {
+  margin: auto;
+  width: 350px;
+  background: transparent;
+  border: none;
+  padding: 2px 5px;
+  font-size: 20px;
+  font-family: lalezar;
+  background-color: rgb(219, 236, 245);
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: lalezar;
+}
+
+.delete {
+  color: red;
+}
+
+.edit {
+  color: #4CAF50;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.myClass {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: lalezar;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.text {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: lalezar;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.submitChange {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 5px;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 20%;
+  font-size: 15px;
+  left: 30px;
+  font-family: lalezar;
+}
+
+/* deck_details.html */
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: auto
+}
+
+table#t01 th {
+  background-color: rgb(219, 236, 245);
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.wrapper {
+  height: 20vh;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: auto;
+}
+
+.search {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #7cb661;
+    padding: 2px 5px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline;
+    font-family: lalezar;
+}
+
+/* review.html */
+#information {
+  margin: auto;
+  width: 11%;
+}
+
+#btnClick {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: lalezar;
+  margin: 0 auto;
+  width: 100px; 
+  padding: 10px;
+}
+
+#learning {
+  margin: auto;
+  width: 30%;
+}
+
+.btn-group input[type=submit] {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+  
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+  
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+
+.cardsOver {
+  margin: auto;
+}
+
+/* index.html */
+.index {
+  background-image: url("../static/img/ben-white-1MHU3zpTvro-unsplash.jpg");
+  background-size: 1600px 1000px;
+  background-repeat: no-repeat;
+  background-position: -300px;
+  font-family: lalezar;
+}
+
+.slogan {
+  font-size: 30px;
+}
+
+.register {
+  font-size: 20px;
+  border-radius: 4px;
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+  padding: 30px;
+}
+
+.inputRegister {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #7cb661;
+  padding: 2px 5px;
+  font-size: 25px;
+  font-family: lalezar;
+  text-align: center;
+  background-color: rgb(219, 236, 245);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.submitRegister {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+  left: 30px;
+  font-family: lalezar;
+}
+
+.notificationError {
+  color: rgb(218, 45, 45);
+  font-size: 20px;
+}
+

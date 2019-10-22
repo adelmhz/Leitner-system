@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Leitner system</title>
+</head>
+<body class="index">
+    <p class="slogan">یادگیری را آسان تر کن</p>
+    <div class="register">
+        <form method="POST" action="">
+            {% for message in get_flashed_messages() %}
+                {% if massage != None %}
+                    <div class="flash">{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+            
+            {% for field in form %}
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                        <div class="notificationError">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            {{ form.hidden_tag() }}
+            <br>
+            {% for field in form %}
+                {{ field(placeholder=field.label.text, class="myClass") }}
+                <br><br>
+            {% endfor %}
+            <button type="submit" class="submitRegister">ورود</button>
+        </form>
+        <p>هنوز ثبت نام نکردی؟ <a href="{{ url_for('register') }}">اینجا</a> کلیک کن</p>
+    </div>
+</body>
+</html>
